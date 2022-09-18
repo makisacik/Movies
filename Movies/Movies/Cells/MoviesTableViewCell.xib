@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="378" id="KGk-i7-Jjw" customClass="MoviesTableViewCell" customModule="Movies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="498" height="378"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="498" height="378"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QuestionMark" translatesAutoresizingMaskIntoConstraints="NO" id="AvY-MB-svQ">
+                        <rect key="frame" x="10" y="10" width="150" height="250"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="250" id="Xrb-RX-W9q"/>
+                            <constraint firstAttribute="width" constant="150" id="bYY-Ot-1Dq"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="pvQ-PV-9hr">
+                        <rect key="frame" x="175" y="15" width="308" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ueb-0v-qZw">
+                        <rect key="frame" x="175" y="69" width="90" height="53"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="nVw-gq-fbt">
+                                <rect key="frame" x="0.0" y="0.0" width="90" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGj-bw-ZqF">
+                                <rect key="frame" x="0.0" y="35" width="44" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRs-m6-hIa">
+                        <rect key="frame" x="175" y="152" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="GnL-GX-c2D"/>
+                            <constraint firstAttribute="height" constant="25" id="cq9-ad-g9E"/>
+                        </constraints>
+                        <color key="tintColor" systemColor="labelColor"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
+                        <connections>
+                            <action selector="favoriteButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="caF-uz-TqH"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="pvQ-PV-9hr" firstAttribute="leading" secondItem="AvY-MB-svQ" secondAttribute="trailing" constant="15" id="0l2-i4-RTO"/>
+                    <constraint firstItem="pvQ-PV-9hr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="3Eb-cv-gO6"/>
+                    <constraint firstItem="Ueb-0v-qZw" firstAttribute="leading" secondItem="AvY-MB-svQ" secondAttribute="trailing" constant="15" id="5Xy-Xj-mJT"/>
+                    <constraint firstItem="Ueb-0v-qZw" firstAttribute="top" secondItem="pvQ-PV-9hr" secondAttribute="bottom" constant="30" id="8g3-cL-g00"/>
+                    <constraint firstItem="cRs-m6-hIa" firstAttribute="top" secondItem="Ueb-0v-qZw" secondAttribute="bottom" constant="30" id="CB8-bV-yQR"/>
+                    <constraint firstAttribute="bottom" secondItem="AvY-MB-svQ" secondAttribute="bottom" constant="10" id="IpK-8F-gFq"/>
+                    <constraint firstItem="AvY-MB-svQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="MPE-MG-pmw"/>
+                    <constraint firstAttribute="trailing" secondItem="pvQ-PV-9hr" secondAttribute="trailing" constant="15" id="PaI-jm-2Bt"/>
+                    <constraint firstItem="AvY-MB-svQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="lTK-9G-OHS"/>
+                    <constraint firstItem="cRs-m6-hIa" firstAttribute="leading" secondItem="AvY-MB-svQ" secondAttribute="trailing" constant="15" id="mvd-nP-guH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="movieFavouriteButton" destination="cRs-m6-hIa" id="Ru9-Gk-EWW"/>
+                <outlet property="movieImage" destination="AvY-MB-svQ" id="YUC-fI-Rpq"/>
+                <outlet property="movieRatingLabel" destination="xGj-bw-ZqF" id="HrH-GH-5L5"/>
+                <outlet property="movieReleaseDateLabel" destination="nVw-gq-fbt" id="YUr-w8-8yV"/>
+                <outlet property="movieTitleLabel" destination="pvQ-PV-9hr" id="zuA-IO-0ww"/>
+            </connections>
+            <point key="canvasLocation" x="266.66666666666669" y="204.24107142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="QuestionMark" width="1024" height="1024"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

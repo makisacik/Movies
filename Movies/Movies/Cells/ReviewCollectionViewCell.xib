@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ReviewCollectionViewCell" reuseIdentifier="ReviewCollectionViewCell" id="gTV-IL-0wX" customClass="ReviewCollectionViewCell" customModule="Movies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="328" height="252"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="328" height="252"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aud-ka-JGN">
+                        <rect key="frame" x="0.0" y="0.0" width="328" height="252"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username Username " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GuA-2u-6Th">
+                                <rect key="frame" x="55" y="5" width="140" height="45"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzb-a7-2FC">
+                                <rect key="frame" x="5" y="55" width="250" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="BCr-6I-bg5"/>
+                                    <constraint firstAttribute="width" constant="250" id="ngn-NS-o1H"/>
+                                    <constraint firstAttribute="height" constant="120" id="xis-ho-1Y4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AuthorPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="Tla-ZO-fwG">
+                                <rect key="frame" x="5" y="5" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="Lgd-zz-avZ"/>
+                                    <constraint firstAttribute="height" constant="45" id="e8u-7W-hcp"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Tla-ZO-fwG" firstAttribute="top" secondItem="aud-ka-JGN" secondAttribute="top" constant="5" id="6tm-ob-Xen"/>
+                            <constraint firstItem="jzb-a7-2FC" firstAttribute="top" secondItem="Tla-ZO-fwG" secondAttribute="bottom" constant="5" id="How-5n-2Ln"/>
+                            <constraint firstItem="GuA-2u-6Th" firstAttribute="leading" secondItem="Tla-ZO-fwG" secondAttribute="trailing" constant="5" id="XCH-A6-8uZ"/>
+                            <constraint firstItem="Tla-ZO-fwG" firstAttribute="leading" secondItem="aud-ka-JGN" secondAttribute="leading" constant="5" id="nAt-Bl-Lzf"/>
+                            <constraint firstItem="jzb-a7-2FC" firstAttribute="top" secondItem="GuA-2u-6Th" secondAttribute="bottom" constant="5" id="spI-KG-jFq"/>
+                            <constraint firstItem="jzb-a7-2FC" firstAttribute="leading" secondItem="aud-ka-JGN" secondAttribute="leading" constant="5" id="stW-iK-mZw"/>
+                            <constraint firstItem="GuA-2u-6Th" firstAttribute="top" secondItem="aud-ka-JGN" secondAttribute="top" constant="5" id="zIA-o1-nsF"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="aud-ka-JGN" secondAttribute="trailing" id="C9a-uc-S4d"/>
+                <constraint firstItem="aud-ka-JGN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="aIl-Db-7Uf"/>
+                <constraint firstItem="aud-ka-JGN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cOM-rl-uBM"/>
+                <constraint firstAttribute="bottom" secondItem="aud-ka-JGN" secondAttribute="bottom" id="wUg-OG-W9R"/>
+            </constraints>
+            <size key="customSize" width="328" height="252"/>
+            <connections>
+                <outlet property="authorAvatarImageView" destination="Tla-ZO-fwG" id="Mm1-Ca-hjP"/>
+                <outlet property="authorNameLabel" destination="GuA-2u-6Th" id="lVd-TY-7wb"/>
+                <outlet property="reviewLabel" destination="jzb-a7-2FC" id="vmu-AL-IIi"/>
+            </connections>
+            <point key="canvasLocation" x="259.4202898550725" y="213.61607142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="AuthorPlaceholder" width="300" height="339"/>
+    </resources>
+</document>
